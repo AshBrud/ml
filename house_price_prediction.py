@@ -4,17 +4,12 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-# Pour ouvrir le model afin de pouvoir l'utiliser
-# 
 model = pickle.load(open('regression_model.sav', 'rb'))
 
 st.title('Prediction des prix de maison')
 st.sidebar.header('Données de la maison')
 image = Image.open('maison.jpg')
 st.image(image, '')
-
-# FUNCTION
-
 
 def house_report():
   OverallQual = st.sidebar.slider('OverallQual', 1,10, 1)
