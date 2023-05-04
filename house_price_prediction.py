@@ -49,5 +49,5 @@ st.header('Données de la maison')
 st.write(house_data)
 
 house_price = model.predict(house_data)
-st.subheader('Prix de la maison')
-st.subheader(str(np.round(house_price[0], 2)) + ' FCFA')
+st.subheader("Prix = :red[{} FCFA]".format(str(np.round(house_price[0], 2))))
+st.markdown('Fait **_par_ Alnise BITOKI**.')
