@@ -76,11 +76,5 @@ st.header('Données de la maison')
 st.write(house_data)
 
 house_price = model.predict(house_data)
-<<<<<<< HEAD
 st.subheader("Prix = {} FCFA".format(str(np.round(house_price[0], 2))))
 st.markdown('Fait **_par_ Alnise BITOKI**.')
-=======
-st.subheader('Prix = :red[{}] FCFA'.format(format_price(math.floor(np.round(house_price[0], 2)))))
-st.divider()
-st.markdown('Fait  _par_  :green[**Alnise BITOKI**]')
->>>>>>> a9c2f88c6749820026cdfd1cfd9d9b1af2f4c46b
