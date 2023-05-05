@@ -72,7 +72,7 @@ def format_price(number, spacing = ' '):
   return ret_str[1:] if ret_str[0] == ' ' else ret_str
 
 house_data = house_report()
-st.header('Données de la maison')g
+st.header('Données de la maison')
 st.write(house_data)
 
 house_price = model.predict(house_data)
