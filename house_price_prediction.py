@@ -26,18 +26,18 @@ st.image(image, '')
 # Et Créer et formater le tableau sur l'application web
 # 
 def house_report():
-  OverallQual = st.sidebar.slider('(OverallQual)', 1,10, 1)
-  ExterQual = st.sidebar.slider('(ExterQual)', 1,4, 1)
-  Neighborhood = st.sidebar.slider('(Neighborhood)', 1,24, 1)
-  GarageCars = st.sidebar.slider('(GarageCars)', 0,2, 0)
-  GrLivArea = st.sidebar.slider('(GrLivArea)', 5,9, 1)
-  YearBuilt = st.sidebar.slider('(YearBuilt)', 1900,2000, 1900) 
-  TotalBsmtSF = st.sidebar.slider('(TotalBsmtSF)', 0,9, 1)
-  BsmtQual = st.sidebar.slider('(BsmtQual)', 0,5, 1)
-  GarageArea = st.sidebar.slider('(GarageArea)', 0,8, 0)
-  KitchenQual = st.sidebar.slider('(KitchenQual)', 1,4, 1)
-  stFlrSF = st.sidebar.slider('(1stFlrSF)', 5,9, 1)
-  FullBath = st.sidebar.slider('(FullBath)', 0,2, 0)
+  OverallQual = st.sidebar.slider('Etat global (OverallQual)', 1,10, 1)
+  ExterQual = st.sidebar.slider('Etat externe (ExterQual)', 1,5, 1)
+  Neighborhood = st.sidebar.slider('Voisinage (Neighborhood)', 1,25, 1)
+  GarageCars = st.sidebar.slider('Nbr voiture du garage (GarageCars)', 0,2, 0)
+  GrLivArea = st.sidebar.slider('Espace habitable (GrLivArea)', 5,9, 1)
+  YearBuilt = st.sidebar.slider('Année de construction (YearBuilt)', 1900,2000, 1900) 
+  TotalBsmtSF = st.sidebar.slider('Taille cour (TotalBsmtSF)', 0,9, 1)
+  BsmtQual = st.sidebar.slider('Etat de la cour (BsmtQual)', 0,5, 1)
+  GarageArea = st.sidebar.slider('Taille garage (GarageArea)', 0,8, 0)
+  KitchenQual = st.sidebar.slider('Etat cuisine (KitchenQual)', 1,4, 1)
+  stFlrSF = st.sidebar.slider('Taille du RC (1stFlrSF)', 5,9, 1)
+  FullBath = st.sidebar.slider('Taille de la douche (FullBath)', 0,2, 0)
 
   house_report_data = {
       'OverallQual':OverallQual,
