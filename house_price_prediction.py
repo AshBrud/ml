@@ -10,10 +10,11 @@ model = pickle.load(open('model/regression_model.sav', 'rb'))
 #  Configuration générale de la page
 # 
 st.set_page_config(
+  # Titre de la page
   page_title="Bienvenue | Alnise BITOKI house price prediction app",
-  page_icon="img/home2.ico",
-  # layout="wide",
-  # initial_sidebar_state="expand",
+
+  # L'icone de la page
+  page_icon="img/home2.ico"
 )
 
 st.title('Prediction des prix de maison')
@@ -21,6 +22,9 @@ st.sidebar.header('Données de la maison')
 image = Image.open('img/maison.jpg')
 st.image(image, '')
 
+# Fonction pour formater la sideBar
+# Et Créer et formater le tableau sur l'application web
+# 
 def house_report():
   OverallQual = st.sidebar.slider('(OverallQual)', 1,10, 1)
   ExterQual = st.sidebar.slider('(ExterQual)', 1,4, 1)
@@ -52,6 +56,8 @@ def house_report():
   report_data = pd.DataFrame(house_report_data, index=[0])
   return report_data
 
+# Fonction pour formater le prix qui s'affiche
+#
 def format_price(number, spacing = ' '):
   number_reversed = str(number)[::-1]
   ret_str = ''
@@ -71,7 +77,11 @@ def format_price(number, spacing = ' '):
 
   return ret_str[1:] if ret_str[0] == ' ' else ret_str
 
-house_data = house_report()
+
+# Exécution de la première fonction
+# Ce qui configure la SideBar
+house_data = house_report()  
+
 st.header('Données de la maison')
 st.write(house_data)
 
