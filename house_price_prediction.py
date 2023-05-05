@@ -7,6 +7,15 @@ from PIL import Image
 
 model = pickle.load(open('model/regression_model.sav', 'rb'))
 
+#  Configuration générale de la page
+# 
+st.set_page_config(
+  page_title="Bienvenue | Alnise BITOKI house price prediction app",
+  page_icon="img/home2.ico",
+  # layout="wide",
+  # initial_sidebar_state="expand",
+)
+
 st.title('Prediction des prix de maison')
 st.sidebar.header('Données de la maison')
 image = Image.open('img/maison.jpg')
@@ -69,4 +78,4 @@ st.write(house_data)
 house_price = model.predict(house_data)
 st.subheader('Prix = :red[{}] FCFA'.format(format_price(math.floor(np.round(house_price[0], 2)))))
 st.divider()
-st.markdown('Fait  _par_  **Alnise BITOKI**.')
+st.markdown('Fait  _par_  :green[**Alnise BITOKI**]')
