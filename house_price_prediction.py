@@ -4,11 +4,11 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-model = pickle.load(open('regression_model.sav', 'rb'))
+model = pickle.load(open('model/regression_model.sav', 'rb'))
 
 st.title('Prediction des prix de maison')
 st.sidebar.header('Données de la maison')
-image = Image.open('maison.jpg')
+image = Image.open('img/maison.jpg')
 st.image(image, '')
 
 def house_report():
